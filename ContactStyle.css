@@ -1,0 +1,134 @@
+/* تنسيق صفحة الاتصال */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact {
+    padding: 40px 15px; /* تقليل الحواف لتناسب جميع الشاشات */
+    background: white;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 28px; /* تصغير النص قليلاً ليتناسب مع الأجهزة الصغيرة */
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    font-size: 14px; /* تقليل النص لتوفير مساحة أفضل */
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* تنسيق النموذج */
+form {
+    max-width: 500px; /* تقليل العرض ليكون مناسباً للهواتف */
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px; /* تصغير الخط لتوفير مساحة */
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px; /* تصغير النص */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* الحقول عند التمرير */
+input[type="text"], input[type="email"], textarea {
+    background-color: #dcd0b9;  
+    border: 1px solid #ccc;  
+    padding: 10px;
+    font-size: 14px;  
+    width: 100%;  
+    border-radius: 5px;  
+    color: black;  
+    margin-bottom: 10px;  
+}
+
+/* تنسيق عند التمرير داخل الحقول */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #987051;  
+    background-color: #fff;  
+}
+
+/* تنسيق الزر */
+.submit-btn {
+    background-color: #987051;
+    color: white;
+    padding: 12px 25px; /* تقليل الأبعاد لتناسب الهواتف */
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #dcd0b9;  
+}
+
+/* الهيدر (القائمة العلوية) */
+nav {
+    background-color: #ad8a6d;
+    color: #fff;
+    padding: 10px 20px; /* تحسين التباعد ليناسب الأجهزة المختلفة */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* توسيط العناصر */
+    gap: 15px; /* تباعد بين العناصر */
+    flex-wrap: wrap; /* جعل العناصر تنتقل لأسطر إضافية على الأجهزة الصغيرة */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 14px; /* تصغير النص */
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dcd0b9;  
+}
+
+/* تنسيق الرابط */
+a {
+    text-decoration: none;  
+    color: black;  
+    transition: color 0.3s ease;  
+}
+
+a:hover {
+    color: #dcd0b9;  
+}
+

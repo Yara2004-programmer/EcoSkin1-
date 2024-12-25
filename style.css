@@ -1,0 +1,200 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Adjust padding for a more compact layout */
+    background-color: #ad8a6d;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+nav .logo img {
+    width: 120px; /* Adjust logo size for consistency */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; /* Ensure the items are aligned horizontally */
+    gap: 15px; /* Adjust space between items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if necessary */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px; /* Appropriate font size for all devices */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white; /* Hover color change */
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Keep items in a row even on small screens */
+        gap: 10px; /* Smaller gap between items */
+        align-items: center; /* Center the items horizontally */
+    }
+
+    nav .logo img {
+        width: 100px; /* Smaller logo on smaller screens */
+    }
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-wrap: wrap; /* Stack items for small screens */
+    justify-content: space-between;
+    align-items: center;
+    height: auto; /* Removing fixed height */
+    padding: 30px; /* Adjust padding for mobile devices */
+    background-color: #f1f1f1;
+}
+
+.detail {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.detail h1 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.detail p {
+    font-size: 16px;
+    color: black;
+}
+
+.image {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 90%; /* Adjust image width for mobile */
+    height: auto;
+}
+
+/* Hero Image Adjustment for Small Screens */
+@media (max-width: 768px) {
+    .hero .image {
+        order: 2; /* Move image below content on small screens */
+        width: 100%; /* Full width of the container */
+        margin-top: 20px; /* Add space between content and image */
+    }
+
+    .hero .detail {
+        order: 1; /* Keep the text content above the image */
+    }
+}
+
+/* Contact Form Styles */
+.contact {
+    padding: 40px 15px;
+    background: white;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: #dcd0b9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #987051;
+    background-color: #fff;
+}
+
+.submit-btn {
+    background-color: #987051;
+    color: white;
+    padding: 12px 25px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #dcd0b9;
+}
+
+
+
+
