@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Demo</title>
+    <link rel="stylesheet" href="cartStyle.css"> <!-- استخدام نفس CSS -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="encryption.html">Encryption</a></li>
+        </ul>
+    </nav>
+
+    <h1>Encryption Demonstration</h1>
+    <div class="cart">
+        <h2>How Public and Private Key Encryption Works</h2>
+        <p>
+            Public and private key encryption is a secure way to exchange information. It uses two keys: 
+            a public key for encryption and a private key for decryption. Here’s a simple example:
+        </p>
+
+        <div>
+            <h3>Try It Out:</h3>
+            <label for="messageInput">Enter a message to encrypt:</label>
+            <input type="text" id="messageInput" placeholder="Type your message here" style="width: 100%; padding: 10px; margin: 10px 0;">
+
+            <button onclick="encryptMessage()">Encrypt</button>
+            <p><strong>Encrypted Message:</strong> <span id="encryptedMessage"></span></p>
+
+            <button onclick="decryptMessage()">Decrypt</button>
+            <p><strong>Decrypted Message:</strong> <span id="decryptedMessage"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // مفاتيح التشفير
+        const publicKey = "samplePublicKey123"; // مفتاح عام بسيط
+        const privateKey = "samplePrivateKey123"; // مفتاح خاص بسيط
+
+        // التشفير
+        function encryptMessage() {
+            const message = document.getElementById("messageInput").value;
+            if (!message) {
+                alert("Please enter a message to encrypt.");
+                return;
+            }
+            const encrypted = btoa(`${message}:${publicKey}`); // تشفير بسيط باستخدام Base64
+            document.getElementById("encryptedMessage").textContent = encrypted;
+        }
+
+        // فك التشفير
+        function decryptMessage() {
+            const encryptedMessage = document.getElementById("encryptedMessage").textContent;
+            if (!encryptedMessage) {
+                alert("No encrypted message to decrypt.");
+                return;
+            }
+            const decoded = atob(encryptedMessage); // فك التشفير باستخدام Base64
+            const [message] = decoded.split(":");
+            document.getElementById("decryptedMessage").textContent = message;
+        }
+    </script>
+</body>
+</html>
